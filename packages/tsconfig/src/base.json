@@ -36,6 +36,10 @@
 
 		// js
 		"allowJs": true,
-		"checkJs": true
+		"checkJs": true,
+
+		// language and environment
+		"target": "esnext",
+		"lib": ["esnext"]
 	}
 }
