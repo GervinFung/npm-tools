@@ -1,7 +1,7 @@
 {
 	"name": "@poolofdeath20/eslint-config",
 	"description": "My ESLint shareable config",
-	"version": "0.4.2",
+	"version": "0.4.3",
 	"license": "MIT",
 	"type": "module",
 	"module": "./build/index.js",
