@@ -1,3 +1,7 @@
+## 0.1.2 (2 Sep 2025)
+
+- (Fix) Added `language and environment` for base config
+
 ## 0.1.1 (4 Sep 2024)
 
 - (Fix) React tsconfig update remove `moduleResolution`

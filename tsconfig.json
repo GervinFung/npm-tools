@@ -1,5 +1,8 @@
 {
 	"extends": "@poolofdeath20/tsconfig/node",
+	"compilerOptions": {
+		"lib": ["esnext", "dom"]
+	},
 	"include": ["**/*.ts", "**/*.js", "**/*.mjs"],
 	"exclude": ["node_modules", "packages/**/build"]
 }
