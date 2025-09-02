@@ -1,7 +1,5 @@
 import type { ConfigWithExtends } from 'typescript-eslint';
 
-import { fixupPluginRules } from '@eslint/compat';
-// @ts-expect-error: Missing types for '@next/eslint-plugin-next'
 import eslintPluginNext from '@next/eslint-plugin-next';
 
 import { react } from './react';
@@ -10,13 +8,11 @@ const next: ConfigWithExtends = {
 	...react,
 	plugins: {
 		...react.plugins,
-		// eslint-disable-next-line @typescript-eslint/no-unsafe-argument
-		'@next/next': fixupPluginRules(eslintPluginNext),
+		'@next/next': eslintPluginNext,
 	},
-	// eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
+	// @ts-expect-error: Value of nextjs rules is 'string' not 'RuleEntry'
 	rules: {
 		...react.rules,
-		// eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
 		...eslintPluginNext.configs['core-web-vitals'].rules,
 	},
 };

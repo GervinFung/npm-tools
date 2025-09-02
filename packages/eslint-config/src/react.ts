@@ -3,7 +3,6 @@ import type { ConfigWithExtends } from 'typescript-eslint';
 import { fixupPluginRules } from '@eslint/compat';
 import eslintPluginJsxA11y from 'eslint-plugin-jsx-a11y';
 import eslintPluginReact from 'eslint-plugin-react';
-// @ts-expect-error: Missing types for 'eslint-plugin-react-hooks'
 import eslintPluginReactHooks from 'eslint-plugin-react-hooks';
 
 import { base } from './base';
@@ -27,11 +26,9 @@ const react: ConfigWithExtends = {
 	plugins: {
 		...base.plugins,
 		react: eslintPluginReact,
-		// eslint-disable-next-line @typescript-eslint/no-unsafe-argument
 		'react-hooks': fixupPluginRules(eslintPluginReactHooks),
 		'jsx-a11y': eslintPluginJsxA11y,
 	},
-	// eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
 	rules: {
 		...base.rules,
 		...eslintPluginJsxA11y.flatConfigs.strict.rules,
@@ -70,7 +67,6 @@ const react: ConfigWithExtends = {
 			'react/react-in-jsx-scope': 'off',
 			'react/jsx-max-depth': 'off',
 		},
-		// eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
 		...eslintPluginReactHooks.configs.recommended.rules,
 	},
 };
