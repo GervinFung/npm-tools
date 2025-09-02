@@ -1,3 +1,7 @@
+## 0.4.3 (2 Sep 2025)
+
+- (Fix) Remove `@types/eslint__js`
+
 ## 0.4.2 (25 Dec 2024)
 
 - (Fix) Updated peer dependencies and some type-issue

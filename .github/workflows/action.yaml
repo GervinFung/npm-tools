@@ -38,11 +38,11 @@ jobs:
             - name: Pretest CI Setup
               run: cd packages/util && pnpm pretest-ci
 
-            - name: Run Tests
-              run: pnpm test
-
             - name: Produce Build
               run: pnpm build
+
+            - name: Run Tests
+              run: pnpm test
 
             - name: Lint Code
               run: pnpm lint
