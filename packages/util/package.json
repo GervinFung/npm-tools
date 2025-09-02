@@ -32,10 +32,10 @@
 		"url": "https://github.com/GervinFung/npm-tools"
 	},
 	"devDependencies": {
-		"esbuild": "^0.24.0",
+		"esbuild": "^0.25.9",
 		"node-package-helper": "github:GervinFung/node-package-helper",
-		"puppeteer": "^23.4.1",
-		"ts-add-js-extension": "^1.6.4"
+		"puppeteer": "^23.11.1",
+		"ts-add-js-extension": "^1.6.6"
 	},
 	"keywords": [
 		"util"

@@ -1,6 +1,5 @@
 import type { ConfigWithExtends } from 'typescript-eslint';
 
-// @ts-expect-error: Missing types for 'eslint-plugin-import'
 import eslintPluginImport from 'eslint-plugin-import';
 
 const base: ConfigWithExtends = {
@@ -14,13 +13,10 @@ const base: ConfigWithExtends = {
 		},
 	},
 	plugins: {
-		// eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
 		import: eslintPluginImport,
 	},
-	// eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
 	rules: {
 		...{
-			// eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
 			...eslintPluginImport.flatConfigs.recommended.rules,
 			['import/no-unresolved']: 'off',
 			'import/max-dependencies': [
